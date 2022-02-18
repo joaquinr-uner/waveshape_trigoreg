@@ -1,5 +1,3 @@
-addpath(genpath('/home/jruiz'))
-
 res = 600;
 D0 = [4,3];
 vRSR = [0,10,20];
@@ -125,6 +123,6 @@ for i=1:length(vRSR)
         'matrix_phi', [phi1;phi2], 'matrix_A',[A1;A2],...
         'ampl_coefs1',Mamp{1},'ampl_coefs2',Mamp{2},'n_realiz',Nr);
     
-    save(['Results_ExpTrigo_2Chirps_' date '_RSR_' num2str(vRSR(i)) 'dB_LinSin.mat'],'SA')
+    save(['Results_ExpTrigo_2Chirps_' num2str(vRSR(i)) 'dB_LinSin.mat'],'SA')
     
 end
