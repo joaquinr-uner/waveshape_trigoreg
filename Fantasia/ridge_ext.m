@@ -1,4 +1,9 @@
 function [c] = ridge_ext (F,a,b,e,P,redun)
+% Function that implements the T-F representation ridge extraction
+% procedure discussed in Meignen, T. Oberlin, S. McLaughlin, 
+% "A new algorithm for multicomponent signals analysis based on 
+% synchrosqueezing: With an applicationto signal sampling and denoising"
+
 
 if nargin<6
    redun = 1; 
