@@ -126,5 +126,5 @@ for l=1:size(DB,1)
     end
     Meta = struct('wave_indexes',indx,'SNR',SNR,'fixed_r',br,'Correlation',Cor,'MAE',MMAE,'SNRout',SNRout,...
         'Estimations',CS_est,'Coeffs',CV,'waveindx',indx);
-    save(['Results_' DB{l} 'WithThr-17-07-20.mat'],'Meta')
+    save(['Results_' DB{l} '.mat'],'Meta')
 end
