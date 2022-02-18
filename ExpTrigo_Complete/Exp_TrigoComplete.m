@@ -1,6 +1,6 @@
 %% This file runs the experiment described in Sec. 2.2 of the paper
-%% Ruiz, J. Colominas, MA. "Waveshape Model Order Estimation by
-%% Trigonometric Regression". 
+% Ruiz, J. Colominas, MA. "Waveshape Model Order Estimation by
+% Trigonometric Regression". 
 SNR = [0;5;10;15];
 M = size(SNR,1);
 
@@ -13,7 +13,6 @@ DoutRl = zeros(M,Nr);
 DoutGCV = DoutRl;
 DoutWang = DoutRl;
 DoutKavalieris = DoutRl;
-DoutSCH = DoutRl;
 
 t = linspace(0.001,1,2000);
 
@@ -95,23 +94,17 @@ for i1=1:nD0
                     end
                 end
                 
-%                fprintf(['D: ' num2str(D0) ' Case: ' T ' RSR: ' num2str(RSR) 'dB Realization ' num2str(j) ' out of ' num2str(Nr) '\n'])
                 [~,b] = min(R_l);
                 DoutRl(i3,j) = b;
-%                fprintf(['Rl: ' num2str(b)])
                 [~,b] = min(GCV);
                 DoutGCV(i3,j) = b;
-%                fprintf([' GCV: ' num2str(b)])
                 [~,b] = min(Wn(:));
                 [br,~] = ind2sub(size(Wn),b);
                 DoutWang(i3,j) = br;
-%                fprintf([' Wang: ' num2str(br)])
                 [~,b] = min(Kv(:));
                 [br,~] = ind2sub(size(Kv),b);
                 DoutKavalieris(i3,j) = br;
                 telp = toc;
-%                fprintf([' Kavalieris: ' num2str(br) ' out of ' num2str(l_max)...
-%                ' possible candidates (' num2str(SNR(i3)) ' dB). Elapsed Time: ' num2str(telp) '\n'])
             end
         end
         aux = struct('SNR', SNR, 'Type', T, 'n_realiz', Nr,...
@@ -120,7 +113,7 @@ for i1=1:nD0
                         DoutKavalieris,'inst_phase',...
                         phi, 'ampl_coefs', Mamp);
             
-        save(['Exp_' T '_' num2str(D0) '_Harm.mat'],'aux')
+        save(['Exp_Trigo_' T '_' num2str(D0) '.mat'],'aux')
 
     end
 end
