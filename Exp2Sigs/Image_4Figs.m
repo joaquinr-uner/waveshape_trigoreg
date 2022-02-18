@@ -2,9 +2,8 @@
 % Ruiz, J. Colominas, MA. "Waveshape Model Order Estimation by
 % Trigonometric Regression". 
 Sufix = 'LinSin';
-date = '12-Nov';
 SNR = 0;
-load(['Results_ExpTrigo_2Chirps_' date '-2020_RSR_' num2str(SNR) 'dB_' Sufix '.mat'])
+load(['Results_ExpTrigo_2Chirps_' num2str(SNR) 'dB_' Sufix '.mat'])
 DG = SA.DGCV;
 DR = SA.DRl;
 DW = SA.DWang;
