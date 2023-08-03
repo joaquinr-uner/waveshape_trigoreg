@@ -34,7 +34,7 @@ set(gca,'XTick',[]);set(gca,'YTick',LG(1,1):LG(1,2))
 colormap(cm)
 set(gca,'FontSize',txtfont)
 subplot(4,3,[3,6,9])
-bar(LG(1,1):LG(1,2),marg2G,'k')
+bar(LG(1,1):LG(1,2),marg1G,'k')
 posV = get(gca,'Position');
 posV(2) = posI(2);
 posV(4) = posI(4);
@@ -42,7 +42,7 @@ set(gca,'XLim',yl,'Position',posV)
 camroll(-270)
 set(gca,'FontSize',txtfont)
 subplot(4,3,[10,11])
-bar(LG(2,1):LG(2,2),marg1G,'k')
+bar(LG(2,1):LG(2,2),marg2G,'k')
 set(gca,'Position',[0.13 0.14 0.4942 0.1577])
 set(gca,'XLim',xl)
 xlab = xlabel('$r^*_2$','interpreter','latex');
@@ -64,7 +64,7 @@ set(gca,'XTick',[]);set(gca,'YTick',LR(1,1):LR(1,2))
 colormap(cm)
 set(gca,'FontSize',txtfont)
 subplot(4,3,[3,6,9])
-bar(LR(1,1):LR(1,2),marg2R,'k')
+bar(LR(1,1):LR(1,2),marg1R,'k')
 posV = get(gca,'Position');
 posV(2) = posI(2);
 posV(4) = posI(4);
@@ -72,7 +72,7 @@ set(gca,'XLim',yl,'Position',posV)
 camroll(-270)
 set(gca,'FontSize',txtfont)
 subplot(4,3,[10,11])
-bar(LR(2,1):LR(2,2),marg1R,'k')
+bar(LR(2,1):LR(2,2),marg2R,'k')
 set(gca,'Position',[0.13 0.14 0.4942 0.1577])
 set(gca,'XLim',xl)
 xlab = xlabel('$r^*_2$','interpreter','latex');
@@ -94,7 +94,7 @@ set(gca,'XTick',[]);set(gca,'YTick',LW(1,1):LW(1,2))
 colormap(cm)
 set(gca,'FontSize',txtfont)
 subplot(4,3,[3,6,9])
-bar(LW(1,1):LW(1,2),marg2W,'k')
+bar(LW(1,1):LW(1,2),marg1W,'k')
 posV = get(gca,'Position');
 posV(2) = posI(2);
 posV(4) = posI(4);
@@ -103,7 +103,7 @@ camroll(-270)
 set(gca,'FontSize',txtfont)
 subplot(4,3,[10,11])
 set(gca,'Position',[0.13 0.14 0.4942 0.1577])
-bar(LW(2,1):LW(2,2),marg1W,'k')
+bar(LW(2,1):LW(2,2),marg2W,'k')
 set(gca,'XLim',xl)
 xlab = xlabel('$r^*_2$','interpreter','latex');
 xlab.Position(2) = xlaps2;
@@ -123,7 +123,7 @@ set(gca,'XTick',[]);set(gca,'YTick',LK(1,1):LK(1,2))
 colormap(cm)
 set(gca,'FontSize',txtfont)
 subplot(4,3,[3,6,9])
-bar(LK(1,1):LK(1,2),marg2K,'k')
+bar(LK(1,1):LK(1,2),marg1K,'k')
 posV = get(gca,'Position');
 posV(2) = posI(2);
 posV(4) = posI(4);
@@ -132,10 +132,9 @@ camroll(-270)
 set(gca,'FontSize',txtfont)
 subplot(4,3,[10,11])
 set(gca,'Position',[0.13 0.14 0.4942 0.1577])
-bar(LK(2,1):LK(2,2),marg1K,'k')
+bar(LK(2,1):LK(2,2),marg2K,'k')
 set(gca,'XLim',xl)
 xlab = xlabel('$r^*_2$','interpreter','latex');
 xlab.Position(2) = xlaps2;
 set(gca,'FontSize',txtfont)
 set(ylab,'FontSize',lbfnt)
-set(xlab,'FontSize',lbfnt)
